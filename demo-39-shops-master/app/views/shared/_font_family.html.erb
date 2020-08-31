@@ -1,0 +1,4 @@
+<div class="nav-font">
+	<label for="<%= id %>"><%= caption %></label>
+	<%= select_tag id, options_for_select(["Arial Narrow", "calibri", "fantasy", "Georgia, serif", "sans-serif", "ui-sans-serif"], "Arial Narrow"), onchange: "fontFamily(this, '#{target}',	'#{tag}')", title: 'Font Family', autocomplete: :off %>
+</div>

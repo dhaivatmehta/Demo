@@ -1,0 +1,116 @@
+<div class="top-strip">
+	<p style="margin-right: 150px;">
+		IMPORTANT: Your changes are not saved until you click here.
+	</p>
+	<button class="button save-changes">
+		Save Changes
+	</button>
+</div>
+<section class="main">
+  	<!-- START control panel -->
+	<section class="left-container">
+		<!-- START logi -->
+		<div class="edit-heading">
+			<%= render 'shared/image', caption: '<b>Logo</b> (200px x 50px)', id: 'logo-ctr', target: 'logo-cmp', name: 'logo' %>
+		</div>
+		<!-- END logi -->
+
+		<!-- START navigation menu -->
+		<div class="edit-heading">
+			<div><b>Navigation Menu</b></div>
+			<%= render 'shared/background_color', caption: 'Background Color', id: 'nv-bg', target: 'editor-navigation', color: '' %>
+			<%= render 'shared/text_color', caption: 'Link Color', id: 'nv-co', target: 'editor-navigation', color: '', tag: 'a' %>
+			<%= render 'shared/font_family', caption: 'Font', id: 'nv-fo', target: 'editor-navigation', family: '', tag: 'a' %>
+			<%= render 'shared/font_style', caption: 'Formatting', id: 'nv-fs', target: 'editor-navigation', style: '', tag: 'a' %>
+		</div>
+		<!-- END navigation menu -->
+
+		<!-- START main banner -->
+		<div class="edit-heading">
+			<%= render 'shared/image', caption: '<b>Main Banner</b> (800px x 400px)', id: 'banner-ctrl', target: 'banner-cmp', name: 'banner' %>
+		</div>
+		<!-- END main banner -->
+
+		<!-- START heading -->
+		<div class="edit-heading">
+			<div><b>Heading</b></div>
+			<%= render 'shared/text_color', caption: 'Text Color', id: 'hd-co', target: 'hd-content', color: '', tag: nil %>
+			<%= render 'shared/font_size', caption: 'Font-Size', id: 'hd-fz', target: 'hd-content', size: '' %>
+			<%= render 'shared/font_family', caption: 'Font', id: 'hd-fo', target: 'hd-content', family: '', tag: nil %>
+		</div>
+		<!-- END heading -->
+
+		<!-- START content -->
+		<div class="edit-heading">
+			<div><b>Paragraph Text</b></div>
+			<%= render 'shared/text_color', caption: 'Text Color', id: 'pa-co', target: 'pa-content', color: '', tag: nil %>
+			<%= render 'shared/font_size', caption: 'Font-Size', id: 'pa-fz', target: 'pa-content', size: '' %>
+			<%= render 'shared/font_family', caption: 'Font', id: 'pa-fo', target: 'pa-content', family: '', tag: nil %>
+			<%= render 'shared/font_style', caption: 'Formatting', id: 'pa-fs', target: 'pa-content', style: '', tag: nil %>
+		</div>
+		<!-- END content -->
+
+		<!-- START background -->
+		<div class="edit-heading">
+			<div><b>Page Background</b></div>
+			<%= render 'shared/background_color', caption: 'Background Color', id: 'pg-bg', target: 'editor-content', color: '' %>
+		</div>
+		<!-- END background -->
+
+		<!-- START footer -->
+		<div class="edit-heading">
+			<div><b>Footer</b></div>
+			<%= render 'shared/text_color', caption: 'Text Color', id: 'ft-co', target: 'editor-footer', color: '', tag: nil %>
+			<%= render 'shared/background_color', caption: 'Background Color', id: 'ft-bg', target: 'editor-footer', color: '' %>
+		</div>
+		<!-- END footer -->
+	</section>
+	<!-- START control panel -->
+
+	<!-- START template -->
+	<section class="right-container" id='editor-content'>
+		<!-- START logo section -->
+		<div class="logo">
+			<div class="logo-image">
+				<!-- <div>Logo Image</div> -->
+				<img width="200" height="50" id="logo-cmp" src="" alt="" class="rimg" autocomplete="off">
+				 <!-- width="200" height="50" -->
+			</div>
+		</div>
+		<!-- END logo section -->
+
+		<!-- START navigation section -->
+		<nav class="nav" id='editor-navigation'>
+			<%= link_to 'Link 1', 'javascript:void(0)', title: 'Link 1' %>
+			<%= link_to 'Link 2', 'javascript:void(0)', title: 'Link 2' %>
+			<%= link_to 'Link 3', 'javascript:void(0)', title: 'Link 3' %>
+		</nav>
+		<!-- END navigation section -->
+
+		<!-- START main banner section -->
+		<div class="banner">
+			<div class="banner-image">
+				<!-- <div>Main Banner</div> -->
+				<img id="banner-cmp" src="" alt="" autocomplete="off" class="rimg banner-image">
+			</div>
+		</div>
+		<!-- END main banner section -->
+
+		<!-- START heading section -->
+		<div class="main-heading" id="hd-content">This is the Main Heading</div>
+		<!-- END heading section -->
+
+		<!-- START paragraph section -->
+		<div class="paragraph-content" id='pa-content'>
+			This is Paragraph text. You can format it the way you like. This is a paragraph text. You can format it the way you like. This is Paragraph text. You can format it the way you like. This is a paragraph text. You can format it the way you like. This is Paragraph text. You can format it the way you like. This is a paragraph text. You can format it the way you like. This is Paragraph text. You can format it the way you like. This is a paragraph text. You can format it the way you like. This is Paragraph text. You can format it the way you like. This is a paragraph text. You can format it the way you like.
+		</div>
+		<!-- END paragraph section -->
+
+		<!-- START footer section -->
+		<footer class="footer" id="editor-footer">
+			This is Footer Text
+		</footer>
+		<!-- END footer section -->
+	</section>
+	<!-- END template -->
+</section>

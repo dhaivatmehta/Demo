@@ -1,0 +1,4 @@
+<div class="nav-color">
+	<label for="<%= id %>"><%= caption %></label>
+	<%= color_field_tag id, color, oninput: "textColor(this, '#{target}', '#{tag}')", title: "Text Color", autocomplete: :off %>
+</div>
